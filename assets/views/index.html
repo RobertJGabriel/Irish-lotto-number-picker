@@ -1,10 +1,10 @@
 <html>
 
 <head>
-    <title>Irish Lotto</title>
-
+    <title>Irish Lotto Picker</title>
     <meta charset="utf-8" />
     <meta name="robots" content="noodp" />
+    <link rel="icon" type="image/png" href="./assets/img/logo/lotto.png">
     <link rel="canonical" href="https://robertjgabriel.github.io" />
     <link href="./dist/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="./dist/css/bootstrap/material.min.css" rel="stylesheet">
@@ -30,7 +30,8 @@
                             <h1 v-cloak>In the past <b>{{numberOfDraws}}</b> Irish Lotto draws.</h1>
                             <div id="loading" class="fix fa-spin" v-show="loading"></div>
                             <p v-for="item in frequency">
-                                <b>{{ item['0'] }}</b> appeared <b>{{ item['1']}}</b> times.<br> <b>{{ ((item['1']/totalNumbers)*100).toFixed(2) }} % </b> chance of showing up.
+                                <b>{{ item['0'] }}</b> appeared <b>{{ item['1']}}</b> times.<br> 
+                                <b>{{ ((item['1']/totalNumbers)*100).toFixed(2) }} % </b> chance of showing up.
 
                             </p>
 
