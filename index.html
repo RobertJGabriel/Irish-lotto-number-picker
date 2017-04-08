@@ -30,8 +30,10 @@
                             <h1 v-cloak>In the past <b>{{numberOfDraws}}</b> Irish Lotto draws.</h1>
                             <div id="loading" class="fix fa-spin" v-show="loading"></div>
                             <p v-for="item in frequency">
-                                Number <b>{{ item['0'] }}</b> has a <b>{{((item['1']/totalNumbers)*100).toFixed(2)}} % </b> chance of showing up. It has appeared <b>{{ item['1']}}</b> times.
+                              <b>{{ item['0'] }}</b> appeared  <b>{{ item['1']}}</b> times.<br> <b>{{ ((item['1']/totalNumbers)*100).toFixed(2) }} % </b> chance of showing up.
+                              
                             </p>
+
                         </div>
                     </div>
                 </div>
