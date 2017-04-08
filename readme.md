@@ -25,6 +25,13 @@ This plugin/Code gets the past 50 results from the Irish lotto results and order
 
 - 0 daily users
 
+## Built with
+- Vue.js
+- Npm
+- Love
+- Html
+- Sass
+
 
 ## License
 
