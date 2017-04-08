@@ -1,5 +1,5 @@
 
-![Screenshot 2](https://raw.githubusercontent.com/CoffeeJson/coffee-chrome-extension-/master/assets/img/screens/screen.png "Screenshot")
+![Screenshot 2](https://github.com/RobertJGabriel/Irish-lotto-number-picker/blob/master/assets/img/screens/readme.png "Screenshot")
 
 # About
 This plugin/Code gets the past 50 results from the Irish lotto results and orders then most likely to show up to least.
