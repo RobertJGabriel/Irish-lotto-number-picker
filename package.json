@@ -1,0 +1,20 @@
+{
+  "name": "frequency-irish-lotto",
+  "description": "This app gets the last 50 lotto draws and gives you the which numbers showed up the highest to lowest",
+  "author": "Robert James Gabriel",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-less": "*",
+    "gulp-minify-css": "*",
+    "gulp-uglify": "^1.4.0",
+    "gulp-util": "*",
+    "gulp-logger": "*",
+    "gulp-rename": "*"
+  },
+  "engine": "node >= 0.4.1"
+}

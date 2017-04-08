@@ -1,0 +1,20 @@
+{
+    "name": "Frequency Of Irish Lotto Numbers",
+    "version": "3.0.1",
+    "manifest_version": 2,
+    "description": "This app gets the last 50 lotto draws and gives you the Frequency of numbers showing up from high to low.",
+    "browser_action": {
+        "default_icon": "assets/img/logo/lotto.png",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "128": "assets/img/logo/lotto.png"
+    },
+
+    "permissions": ["tabs", "*://*/*", "http://*/*", "https://*/*", "<all_urls>", "storage"],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+    "web_accessible_resources": [
+        "assets/css/bootstrap/*.css", "assets/css/myStyles.css", "assets/css/fonts/*", "assets/js/*.js", "assets/dist/css/bootstrap/*.css", "assets/dist/css/myStyles.css", "assets/dist/css/fonts/*", "assets/dist/js/*.js"
+    ]
+}
