@@ -20,6 +20,10 @@ This plugin/Code gets the past 50 results from the Irish lotto results and order
 - Load unpackaged extensions.
 - Pick the lotto folder.
 
+## Building
+- Cd into the folder
+- Run npm install
+- Gulp
 
 ## Honors
 
