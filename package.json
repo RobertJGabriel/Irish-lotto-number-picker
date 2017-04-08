@@ -1,6 +1,6 @@
 {
   "name": "frequency-irish-lotto",
-  "description": "This app gets the last 50 lotto draws and gives you the which numbers showed up the highest to lowest",
+  "description": "This plugin/Code gets the past 50 results from the Irish lotto results and orders then most likely to show up to least.",
   "author": "Robert James Gabriel",
   "dependencies": {
     "gulp": "^3.9.1",
