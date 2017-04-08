@@ -8,7 +8,8 @@ logger = require('gulp-logger')
 rename = require('gulp-rename')
 concat = require('gulp-concat')
 sass = require('gulp-sass')
-
+htmlmin = require('gulp-htmlmin')
+babel = require('gulp-babel')
 
 gulp.task 'css', ->
     gulp.src('./assets/css/bootstrap/*.css')
@@ -20,7 +21,7 @@ gulp.task 'css', ->
         showChange: true))
     .pipe(minifyCSS())
     .pipe(rename(suffix: '.min'))
-    .pipe gulp.dest('./assets/dist/css/bootstrap')
+    .pipe gulp.dest('./dist/css/bootstrap')
     return
 
 
@@ -29,13 +30,27 @@ gulp.task 'sass', ->
   .pipe(sass().on('error', sass.logError))
   .pipe(minifyCSS())
   .pipe(rename(suffix: '.min'))
-  .pipe gulp.dest('./assets/dist/css')
+  .pipe gulp.dest('./dist/css')
   return
 
 
 
+gulp.task 'js_app', ->
+    gulp.src('./assets/js/app/*.js')
+    .on('error', (err) ->
+        gutil.log gutil.colors.red(err.message)
+        return
+    ).pipe(logger(
+        before: 'Compling App Javascript'
+        after: 'Finished!'
+        showChange: true))
+    .pipe(babel({presets: ['es2015']}))
+    .pipe(concat('app.min.js'))
+    .pipe(gulp.dest('./dist/js'))
+    return
 
-gulp.task 'js', ->
+
+gulp.task 'js_vendor', ->
     gulp.src([
         './assets/js/vendor/jquery.js'
         './assets/js/vendor/bootstrap.js'
@@ -47,7 +62,7 @@ gulp.task 'js', ->
         gutil.log gutil.colors.red(err.message)
         return
     ).pipe(logger(
-        before: 'Compling Javascript'
+        before: 'Compling Vendor Javascript'
         after: 'Finished!'
         showChange: true))
     .pipe(concat('vendor.min.js'))
@@ -55,10 +70,25 @@ gulp.task 'js', ->
     .pipe(gulp.dest('./dist/js/'))
     return
 
+gulp.task 'html', (done) ->
+  gulp.src('./assets/views/*.html')
+  .pipe(htmlmin({collapseWhitespace: true}))
+  .pipe(logger(
+    before: 'Minifing HTML'
+    after: 'Finished!'
+    showChange: true))
+  .pipe(gulp.dest('./'))
+  return
+
+
+
+
 gulp.task 'build', [
     'css'
     'sass'
-    'js'
+    'js_vendor'
+    'js_app'
+    'html'
 ]
 
 gulp.task 'default', [ 'build' ]

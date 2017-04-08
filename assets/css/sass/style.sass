@@ -3,6 +3,8 @@ html, body, #app
   min-height: 380px
   height: 380px
   width: 370px
+  margin-left: auto
+  margin-right: auto
   background-color: #fff
 
 .yes
@@ -29,7 +31,10 @@ html, body, #app
 .number
   margin-top: 30px
   display: block
-
+@media (min-width: 768px)
+  .col-sm-6
+    float: none
+    
 .col-sm-6 > .row > div >
   h1
     font-size: 3em
