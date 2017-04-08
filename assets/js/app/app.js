@@ -1,4 +1,4 @@
-var lottoUrl = 'http://resultsservice.lottery.ie/resultsservice.asmx/GetResults';
+var lottoUrl = 'https://resultsservice.lottery.ie/resultsservice.asmx/GetResults';
 
 function sleep(time) {
     var d1 = new Date().getTime();
