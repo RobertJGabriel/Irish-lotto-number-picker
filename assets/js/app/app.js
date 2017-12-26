@@ -9,7 +9,7 @@ new Vue({
         numbers: [],
         totalNumbers: 0,
         numberOfDraws: 50,
-        loading: false
+        loading: true
     },
     mounted: function() {
         this.fetchLotto();
